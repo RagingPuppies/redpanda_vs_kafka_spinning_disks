@@ -62,6 +62,10 @@ rp_lt  OK
 
 
 ## Results
+I've ran the following test tool from 6 machines for Kafka and Redpanda, and this yield the following:
+```
+./kafka-producer-perf-test.sh --topic load_test --throughput -1 --num-records 1000000 --record-size 1024 --producer-props acks=1 bootstrap.servers=redpanda1:9092
+```
 
 
 | System       | Records/s | Throughput | avg Latency | Total Produced |
